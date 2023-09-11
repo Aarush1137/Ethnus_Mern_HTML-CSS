@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.rounded-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(150, 212, 211);
+}
+
+.rounded-table th, .rounded-table td {
+    text-align: center;
+    padding: 12px;
+}
+
+.rounded-table th {
+    background-color: #158445;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.rounded-table td {
+    background-color:#158445#ecf0f1;
+    border-radius: 0 0 10px 10px;
+}
+
+.rounded-table tr:hover td {
+    background-color: #d5dbdb;
+}
+
+.author {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-style: italic;
+    animation: fadeIn 1s;
+}
+/* CSS for the shape grid */
+.shape-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px; /* Reduced gap to 70px */
+    margin: 30px auto; /* Center the shape grid */
+    justify-content: center; /* Center horizontally */
+}
+
+.rectangle {
+    width: 100px;
+    height: 80px;
+    border: 3px solid green;
+}
+
+/* Add roundness to specific rectangles */
+.rectangle:nth-child(1),
+.rectangle:nth-child(2),
+.rectangle:nth-child(4),
+.rectangle:nth-child(8) {
+    border-radius: 8px;
+}
+
+/* Add 10px roundness to specific rectangles */
+.rectangle:nth-child(3),
+.rectangle:nth-child(6) {
+    border-radius: 20px;
+}
+.rectangle:nth-child(9) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 8px;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border: 3px solid green;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
